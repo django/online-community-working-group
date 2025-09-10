@@ -89,6 +89,3 @@ body:
       description: Please share any other relevant details.
     validations:
       required: false
-
-
-    - platform's affected (Forum, Discord, Github, Reddit?)
