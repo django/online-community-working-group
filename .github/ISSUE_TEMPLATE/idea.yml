@@ -1,0 +1,94 @@
+---
+name: Community Idea
+description: Suggest a new idea
+labels: ["type / idea", "phase / untriaged"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking time to suggest your idea! Please be aware that this process takes a while (at least weeks). We appreciate your patience!
+
+        If you haven't already, [please go search the existing issues for ideas similar to yours](https://github.com/django/new-features/issues?q=is%3Aissue).
+
+        If English isn't your native language, let us know and do your best. If you'd like, you can answer in your native language and we'll use translation tools.
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://www.djangoproject.com/conduct/)
+      options:
+        - label: I agree to follow Django's Code of Conduct
+          required: true
+
+  - type: textarea
+    id: idea-description
+    attributes:
+      label: Idea Description
+      description: Describe your idea in a sentence or two.
+      placeholder: A clear and concise description of what you'd like to see.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Which existing platform's would this idea affect?
+      description: Which part of the community does this affect?
+      options:
+        - label: Forum
+          required: false
+        - label: Discord
+          required: false
+        - label: Github
+          required: false
+        - label: elsewhere (tell us in the description)
+          required: false
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why does idea belong in Django community? Please explain what this idea would bring to the community in order to improve it?
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem(s) does this solve? Please explain the problem or problems this feature would address. What is the the gap that exists?
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: involvement
+    attributes:
+      label: Would you like to be involved in this idea?
+      description: Do you propose being part of the team that will implement the feature or are you requesting for a feature to be built by others
+      options:
+        - label: I would like to be involved in progressing this idea.
+          required: true
+    validations:
+      required: true
+
+  - type: textarea
+    id: other-contributors
+    attributes:
+      label: Other Contributors
+      description: Who else would like to be involved? Please provide github usernames.
+    validations:
+      required: false
+
+  - type: textarea
+    id: other-details
+    attributes:
+      label: Other Details
+      description: Please share any other relevant details.
+    validations:
+      required: false
+
+
+    - platform's affected (Forum, Discord, Github, Reddit?)
