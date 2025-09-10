@@ -1,0 +1,41 @@
+name: Auto Comment on New Issues
+
+on:
+  issues:
+    types: [opened]
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  MY_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  auto-comment:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Auto Comment
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const creator = context.payload.issue.user.login;
+
+            const commentBody = `Thank you ${creator} for sharing your idea! We have a lot of them so please be patient. You can see the current queue here.
+
+              ### Community instructions
+              For commenters, please use the emoji reactions on the issue to express support, and/or concern easily. Please use the comments to ask questions or contribute knowledge about the idea. It is unhelpful to post comments of "I'd love this" or "What's the state of this?"
+
+              ### Reaction Guide
+              - 👍 This is something I would use
+              - 👎 This is something that would cause problems for me or the Django community
+              - 😕 I’m indifferent to this
+              - 🎉 This is an easy win
+              - 🚀 I would actively volunteer to make this idea happen
+            `;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: commentBody
+            });

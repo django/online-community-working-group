@@ -1,0 +1,16 @@
+name: Setup Repository Labels
+
+on:
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  sync-labels:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/checkout@v2
+      - uses: micnncim/action-label-syncer@v1
+        name: Sync Labels
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
