@@ -70,7 +70,9 @@ body:
       description: Do you propose being part of the team that will implement the feature or are you requesting for a feature to be built by others
       options:
         - label: I would like to be involved in progressing this idea.
-          required: true
+          required: false
+        - label: I am only suggesting this idea, but I do not want to be involved.
+          required: false
     validations:
       required: true
 
