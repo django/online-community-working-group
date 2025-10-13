@@ -6,9 +6,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking time to suggest your idea! Please be aware that this process takes a while (at least weeks). We appreciate your patience!
+        Thank you for taking time to suggest your idea! Please be aware that this process takes a while (in the order of weeks). We appreciate your patience!
 
-        If you haven't already, [please go search the existing issues for ideas similar to yours](https://github.com/django/new-features/issues?q=is%3Aissue).
+        If you haven't already, [please go and search the existing issues for ideas similar to yours](https://github.com/django/new-features/issues?q=is%3Aissue).
 
         If English isn't your native language, let us know and do your best. If you'd like, you can answer in your native language and we'll use translation tools.
 
@@ -33,7 +33,7 @@ body:
   - type: checkboxes
     id: platforms
     attributes:
-      label: Which existing platform's would this idea affect?
+      label: Which existing platforms would this idea affect?
       description: Which part of the community does this affect?
       options:
         - label: Forum
@@ -42,7 +42,7 @@ body:
           required: false
         - label: Github
           required: false
-        - label: elsewhere (tell us in the description)
+        - label: Elsewhere (please tell us in the description)
           required: false
     validations:
       required: true
@@ -51,7 +51,7 @@ body:
     id: rationale
     attributes:
       label: Rationale
-      description: Why does idea belong in Django community? Please explain what this idea would bring to the community in order to improve it?
+      description: Why does the idea belong in the Django community? Please explain what this idea would bring to the community in order to improve it.
     validations:
       required: true
 
@@ -59,7 +59,7 @@ body:
     id: problem
     attributes:
       label: Problem
-      description: What problem(s) does this solve? Please explain the problem or problems this feature would address. What is the the gap that exists?
+      description: What problem(s) does this solve? Please explain the problem or problems this idea would address. What is the the gap that exists?
     validations:
       required: true
 
@@ -67,7 +67,7 @@ body:
     id: involvement
     attributes:
       label: Would you like to be involved in this idea?
-      description: Do you propose being part of the team that will implement the feature or are you requesting for a feature to be built by others
+      description: Do you propose being part of the team that will work on the idea or are you requesting an idea to be implemented by others?
       options:
         - label: I would like to be involved in progressing this idea.
           required: false
@@ -80,7 +80,7 @@ body:
     id: other-contributors
     attributes:
       label: Other Contributors
-      description: Who else would like to be involved? Please provide github usernames.
+      description: Who else would like to be involved? Please provide GitHub usernames.
     validations:
       required: false
 
